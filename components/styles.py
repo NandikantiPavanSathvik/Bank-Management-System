@@ -5,220 +5,518 @@ def load_css():
 
     st.markdown(
         """
-        <style>
+<style>
 
-        /* =========================
-           GLOBAL
-        ========================= */
+/* =========================================
+   GLOBAL
+========================================= */
 
-        .stApp {
-            background-color: #f5f7fb;
-        }
+.stApp {
+    background-color: #f4f8fc;
+    color: #0f172a;
+}
 
-        .main {
-            padding-top: 1rem;
-        }
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
 
-        /* =========================
-           SIDEBAR
-        ========================= */
 
-        [data-testid="stSidebar"] {
-            background-color: #111827;
-        }
+/* =========================================
+   STREAMLIT TOP HEADER
+========================================= */
 
-        [data-testid="stSidebar"] * {
-            color: white;
-        }
+header[data-testid="stHeader"] {
+    background-color: transparent;
+}
 
-        /* =========================
-           HEADER
-        ========================= */
 
-        .bank-header {
-            background: linear-gradient(
-                135deg,
-                #111827,
-                #1e3a8a
-            );
+/* =========================================
+   SIDEBAR
+========================================= */
 
-            padding: 25px 30px;
+[data-testid="stSidebar"] {
+    background-color: #ffffff;
+    border-right: 1px solid #dbe7f3;
+}
 
-            border-radius: 18px;
+[data-testid="stSidebar"] * {
+    color: #1e293b;
+}
 
-            margin-bottom: 25px;
+[data-testid="stSidebar"] h2 {
+    color: #1565c0 !important;
+    font-weight: 700;
+}
 
-            color: white;
 
-            box-shadow:
-                0 10px 30px
-                rgba(0, 0, 0, 0.12);
-        }
+/* Sidebar radio buttons */
 
-        .bank-header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+[data-testid="stSidebar"] label {
+    color: #1e293b !important;
+}
 
-        .bank-header p {
-            margin-top: 8px;
-            opacity: 0.8;
-        }
 
-        /* =========================
-           STAT CARDS
-        ========================= */
+/* =========================================
+   PAGE HEADINGS
+========================================= */
 
-        .stat-card {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #0f172a !important;
+}
 
-            background: white;
 
-            padding: 22px;
+/* =========================================
+   BANK HEADER
+========================================= */
 
-            border-radius: 16px;
+.bank-header {
 
-            border: 1px solid #e5e7eb;
+    display: flex;
 
-            box-shadow:
-                0 5px 20px
-                rgba(0, 0, 0, 0.05);
+    align-items: center;
 
-            min-height: 120px;
-        }
+    gap: 18px;
 
-        .stat-title {
+    background-color: #1565c0;
 
-            color: #6b7280;
+    padding: 28px 32px;
 
-            font-size: 14px;
+    border-radius: 16px;
 
-            margin-bottom: 10px;
-        }
+    margin-bottom: 30px;
 
-        .stat-value {
+    color: white;
 
-            color: #111827;
+    box-shadow:
+        0 8px 25px
+        rgba(21, 101, 192, 0.18);
+}
 
-            font-size: 28px;
 
-            font-weight: 700;
-        }
+.bank-logo {
 
-        .stat-icon {
+    width: 55px;
 
-            font-size: 28px;
+    height: 55px;
 
-            margin-bottom: 5px;
-        }
+    display: flex;
 
-        /* =========================
-           ACCOUNT CARD
-        ========================= */
+    align-items: center;
 
-        .account-card {
+    justify-content: center;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #111827,
-                    #2563eb
-                );
+    background-color: white;
 
-            padding: 28px;
+    border-radius: 12px;
 
-            border-radius: 20px;
+    font-size: 28px;
 
-            color: white;
+    flex-shrink: 0;
+}
 
-            box-shadow:
-                0 10px 25px
-                rgba(37, 99, 235, 0.25);
 
-            margin-bottom: 20px;
-        }
+.bank-header-text h1 {
 
-        .account-number {
+    color: white !important;
 
-            font-size: 14px;
+    margin: 0;
 
-            opacity: 0.75;
-        }
+    font-size: 30px;
 
-        .account-name {
+    font-weight: 700;
+}
 
-            font-size: 24px;
 
-            font-weight: 700;
+.bank-header-text p {
 
-            margin-top: 15px;
-        }
+    color: #e3f2fd !important;
 
-        .account-balance {
+    margin: 5px 0 0;
 
-            font-size: 34px;
+    font-size: 14px;
+}
 
-            font-weight: 700;
 
-            margin-top: 25px;
-        }
+/* =========================================
+   STAT CARDS
+========================================= */
 
-        /* =========================
-           SECTION
-        ========================= */
+.stat-card {
 
-        .section-title {
+    display: flex;
 
-            font-size: 22px;
+    align-items: center;
 
-            font-weight: 700;
+    gap: 16px;
 
-            color: #111827;
+    background-color: #ffffff;
 
-            margin-top: 25px;
+    padding: 22px;
 
-            margin-bottom: 15px;
-        }
+    border-radius: 14px;
 
-        /* =========================
-           BUTTONS
-        ========================= */
+    border: 1px solid #dbe7f3;
 
-        .stButton > button {
+    min-height: 105px;
 
-            border-radius: 10px;
+    box-shadow:
+        0 4px 15px
+        rgba(15, 23, 42, 0.05);
+}
 
-            border: none;
 
-            font-weight: 600;
+.stat-icon {
 
-            min-height: 42px;
-        }
+    width: 52px;
 
-        /* =========================
-           INPUTS
-        ========================= */
+    height: 52px;
 
-        input {
+    display: flex;
 
-            border-radius: 10px !important;
-        }
+    align-items: center;
 
-        /* =========================
-           FOOTER
-        ========================= */
+    justify-content: center;
 
-        .footer {
+    background-color: #e8f2ff;
 
-            text-align: center;
+    border-radius: 12px;
 
-            color: #6b7280;
+    font-size: 25px;
 
-            padding: 30px;
+    flex-shrink: 0;
+}
 
-            font-size: 13px;
-        }
 
-        </style>
-        """,
+.stat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.stat-title {
+
+    color: #64748b !important;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.stat-value {
+
+    color: #1565c0 !important;
+
+    font-size: 25px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ACCOUNT CARD
+========================================= */
+
+.account-card {
+
+    background-color: #1565c0;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    color: white;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(21, 101, 192, 0.20);
+}
+
+
+.account-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+
+    color: white !important;
+}
+
+
+.account-label {
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: #dbeafe !important;
+
+    margin-bottom: 5px;
+}
+
+
+.account-number {
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+    color: white !important;
+
+    margin-bottom: 20px;
+}
+
+
+.account-name {
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: white !important;
+
+    margin-bottom: 25px;
+}
+
+
+.account-balance {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: white !important;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+
+    color: #0f172a !important;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    margin-top: 30px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   STREAMLIT TEXT INPUTS
+========================================= */
+
+[data-baseweb="input"] {
+
+    background-color: #ffffff !important;
+
+    border-radius: 8px !important;
+}
+
+
+[data-baseweb="input"] input {
+
+    background-color: #ffffff !important;
+
+    color: #0f172a !important;
+
+    -webkit-text-fill-color: #0f172a !important;
+
+    caret-color: #1565c0 !important;
+
+    border-radius: 8px !important;
+}
+
+
+/* Placeholder */
+
+[data-baseweb="input"] input::placeholder {
+
+    color: #64748b !important;
+
+    opacity: 1 !important;
+
+    -webkit-text-fill-color: #64748b !important;
+}
+
+
+/* =========================================
+   INPUT LABELS
+========================================= */
+
+.stTextInput label,
+.stNumberInput label {
+
+    color: #334155 !important;
+
+    font-weight: 500 !important;
+}
+
+
+/* =========================================
+   INPUT FOCUS
+========================================= */
+
+[data-baseweb="input"]:focus-within {
+
+    border-color: #1565c0 !important;
+
+    box-shadow:
+        0 0 0 1px #1565c0 !important;
+}
+
+
+/* =========================================
+   NUMBER INPUT
+========================================= */
+
+.stNumberInput input {
+
+    background-color: #ffffff !important;
+
+    color: #0f172a !important;
+
+    -webkit-text-fill-color: #0f172a !important;
+}
+
+
+/* Number input buttons */
+
+.stNumberInput button {
+
+    background-color: #1565c0 !important;
+
+    color: white !important;
+
+    border: none !important;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+[data-testid="stForm"] {
+
+    background-color: transparent;
+
+    border: none;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.stButton > button {
+
+    background-color: #1565c0 !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+
+    border-radius: 8px !important;
+
+    min-height: 42px;
+
+    font-weight: 600 !important;
+}
+
+
+.stButton > button:hover {
+
+    background-color: #0d47a1 !important;
+
+    color: #ffffff !important;
+}
+
+
+/* Form submit button */
+
+.stFormSubmitButton > button {
+
+    background-color: #1565c0 !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+
+    border-radius: 8px !important;
+
+    min-height: 42px;
+
+    font-weight: 600 !important;
+}
+
+
+.stFormSubmitButton > button:hover {
+
+    background-color: #0d47a1 !important;
+
+    color: #ffffff !important;
+}
+
+
+/* =========================================
+   DATAFRAME
+========================================= */
+
+[data-testid="stDataFrame"] {
+
+    border: 1px solid #dbe7f3;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   ALERTS
+========================================= */
+
+[data-testid="stAlert"] {
+
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    text-align: center;
+
+    color: #64748b !important;
+
+    padding: 30px;
+
+    font-size: 13px;
+}
+
+</style>
+""",
         unsafe_allow_html=True
     )

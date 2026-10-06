@@ -3,17 +3,15 @@ import streamlit as st
 
 def show_navbar():
 
-    st.markdown(
-        """
-        <div class="bank-header">
+    html = """
+<div class="bank-header">
+<div class="bank-logo">🏦</div>
 
-            <h1>🏦 PavanBank</h1>
+<div>
+<h1>PavanBank</h1>
+<p>Simple, Secure & Reliable Banking</p>
+</div>
+</div>
+"""
 
-            <p>
-                Secure. Simple. Smart banking management.
-            </p>
-
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.markdown(html, unsafe_allow_html=True)

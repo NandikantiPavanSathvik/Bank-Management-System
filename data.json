@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "name": "pavan",
+        "age": 21,
+        "email": "pavan@mail",
+        "pin": 1234,
+        "accountNo.": "JMF131^",
+        "balance": 10000
+    }
+]

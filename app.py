@@ -6,13 +6,13 @@ from components.styles import load_css
 from components.sidebar import show_sidebar
 from components.navbar import show_navbar
 
-from pages.dashboard import show_dashboard
-from pages.create_account import show_create_account
-from pages.account_details import show_account_details
-from pages.deposit import show_deposit
-from pages.withdraw import show_withdraw
-from pages.update_account import show_update_account
-from pages.delete_account import show_delete_account
+from views.dashboard import show_dashboard
+from views.create_account import show_create_account
+from views.account_details import show_account_details
+from views.deposit import show_deposit
+from views.withdraw import show_withdraw
+from views.update_account import show_update_account
+from views.delete_account import show_delete_account
 
 
 # ==========================================
